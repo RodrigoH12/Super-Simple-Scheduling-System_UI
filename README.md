@@ -1,28 +1,41 @@
 # Super-Simple-Scheduling-System_UI
 
-This is the second part (UI) of a two part project for the Super Simple Scheduling System challenge.
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.10.
+## Description
 
-## Development server
+This is the second part (UI) of a two part project for the Super Simple Scheduling System challenge, you may find the first part of the project (API) in this repository https://github.com/RodrigoH12/Super-Simple-Scheduling-System_API.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+This application was created for Students, more specifically, so that they can register for classes based on their agenda. For this reason, the Students will be able to:
+- Log into to their accounts.
+- See Student information and university related news.
+- See all available classes.
+- See list of Students assigned to specific Classes.
+- Assign himself/herself to a class.
 
-## Code scaffolding
+## Technologies Used
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- Angular CLI v16.2.10
+- Node v18.19.0
+- Package Manager: npm v10.2.3
+- Typescript
+- HTML
+- SCSS
 
-## Build
+## Project Set Up
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+### Installing the Project
 
-## Running unit tests
+First of all you have to clone the project and install all the necesssary dependencies:
+```sh
+$ git clone https://github.com/RodrigoH12/Super-Simple-Scheduling-System_UI.git
+$ cd Super-Simple-Scheduling-System_UI
+$ npm install
+```
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+### Build
 
-## Running end-to-end tests
+The you have to run `ng build` command to build the project. The build artifacts will be stored in the `dist/` directory.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+### Running the Project
 
-## Further help
+Finally, use `ng serve` or `npm start` to run the project on a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
