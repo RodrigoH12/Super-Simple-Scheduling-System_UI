@@ -5,7 +5,7 @@ export type Class = {
     id: string;
     title: string;
     description: string;
-    teacher: boolean;
+    teacher: string;
     schedule: ScheduleEnum;
 
     students: Student[];
