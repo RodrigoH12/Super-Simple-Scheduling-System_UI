@@ -29,7 +29,7 @@ export class ClassService {
         );
     }
 
-    AssignStudentToClass(
+    assignStudentToClass(
         classId: String,
         studentId: String
     ): Observable<ClassResponse> {
