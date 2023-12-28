@@ -1,0 +1,19 @@
+@import "/src/assets/scss/variables.scss";
+
+.navbar {
+    background-color: $header-background-color;
+}
+
+.nav-link {
+    color: $header-options-font-color;
+    font-size: $header-options-font-size;
+    margin-left: $header-options-margin;
+    margin-right: $header-options-margin;
+}
+
+.nav-link.active {
+    color: $header-options-font-color;
+    font-weight: $header-options-active-font-weight;
+    max-height: 46px;
+    border-bottom: 1px solid #ffffff;
+}
