@@ -11,9 +11,10 @@ import { SchedulingStateModule } from './core/store/state/app.state';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './shared/components/header/header.component';
+import { HomePageComponent } from './pages/home-page/home-page.component';
 
 @NgModule({
-    declarations: [AppComponent, HeaderComponent],
+    declarations: [AppComponent, HeaderComponent, HomePageComponent],
     imports: [
         BrowserModule,
         AppRoutingModule,
