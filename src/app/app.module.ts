@@ -14,6 +14,7 @@ import { HeaderComponent } from './shared/components/header/header.component';
 import { HomePageComponent } from './pages/home-page/home-page.component';
 import { UserInfoCardComponent } from './pages/home-page/components/userSection/user-info-card/user-info-card.component';
 import { UserClassesCardComponent } from './pages/home-page/components/userSection/user-classes-card/user-classes-card.component';
+import { NewsCarouselComponent } from './pages/home-page/components/newsSection/news-carousel/news-carousel.component';
 
 @NgModule({
     declarations: [
@@ -22,6 +23,7 @@ import { UserClassesCardComponent } from './pages/home-page/components/userSecti
         HomePageComponent,
         UserInfoCardComponent,
         UserClassesCardComponent,
+        NewsCarouselComponent,
     ],
     imports: [
         BrowserModule,

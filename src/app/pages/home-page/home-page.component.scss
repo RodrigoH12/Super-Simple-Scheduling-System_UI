@@ -9,7 +9,14 @@
     .user-section {
         margin-top: $home-page--margin-top;
         margin-bottom: $home-page--margin-bottom;
-        padding: 0px 48px 0px 32px;
+        padding: 0px 24px 0px 32px;
+        height: auto;
+    }
+
+    .news-section {
+        margin-top: $home-page--margin-top;
+        margin-bottom: $home-page--margin-bottom;
+        padding: 0px 48px 0px 24px;
         height: auto;
     }
 }
