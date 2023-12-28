@@ -1,0 +1,33 @@
+@import "/src/assets/scss/variables.scss";
+
+.card {
+    width: 280px;
+    border: $card-border;
+    border-radius: $card-border-radius;
+    box-shadow: $card-box-shadow;
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 8px;
+}
+
+.card-user-img {
+    width: $card-user-img-width;
+    height: $card-user-img-height;
+    border-radius: $card-user-img-border-radius;
+    margin-bottom: 8px;
+}
+
+.card-welcome {
+    font-size: $user-info-card-welcome-font-size;
+    font-weight: $user-info-card-welcome-font-weight;
+    line-height: 20px;
+    margin-bottom: 4px;
+}
+
+.card-user-name {
+    line-height: 28px;
+}
