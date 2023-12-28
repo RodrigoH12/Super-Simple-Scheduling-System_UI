@@ -12,9 +12,15 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './shared/components/header/header.component';
 import { HomePageComponent } from './pages/home-page/home-page.component';
+import { UserInfoCardComponent } from './pages/home-page/components/userSection/user-info-card/user-info-card.component';
 
 @NgModule({
-    declarations: [AppComponent, HeaderComponent, HomePageComponent],
+    declarations: [
+        AppComponent,
+        HeaderComponent,
+        HomePageComponent,
+        UserInfoCardComponent,
+    ],
     imports: [
         BrowserModule,
         AppRoutingModule,
