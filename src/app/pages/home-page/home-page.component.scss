@@ -1,9 +1,8 @@
 @import "/src/assets/scss/variables.scss";
-
 .home-page-container {
     display: grid;
     grid-template-columns: 0.2fr auto;
-    height: 100%;
+    height: $page-height;
     overflow-y: hidden;
     background-color: $application-background-color;
 
@@ -13,4 +12,8 @@
         padding: 0px 48px 0px 32px;
         height: auto;
     }
+}
+
+.user-info-card {
+    margin-bottom: 16px;
 }

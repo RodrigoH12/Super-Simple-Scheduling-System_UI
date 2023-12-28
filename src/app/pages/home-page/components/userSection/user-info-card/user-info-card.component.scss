@@ -24,5 +24,10 @@
 .card-welcome {
     font-size: $user-info-card-welcome-font-size;
     font-weight: $user-info-card-welcome-font-weight;
+    line-height: 20px;
     margin-bottom: 4px;
+}
+
+.card-user-name {
+    line-height: 28px;
 }
