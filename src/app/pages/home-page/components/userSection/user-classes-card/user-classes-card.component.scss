@@ -1,0 +1,36 @@
+@import "/src/assets/scss/variables.scss";
+
+.card {
+    width: 280px;
+    height: calc(100vh - 332px);
+    border: $card-border;
+    border-radius: $card-border-radius;
+    box-shadow: $card-box-shadow;
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    padding: 24px;
+}
+
+.card-title {
+    margin-bottom: 16px;
+}
+
+.user-card-classes-empty {
+    height: 100%;
+    padding: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.user-card-classes-schedule-list {
+    height: calc(100vh - 404px);
+    overflow-y: auto;
+}
+
+.user-card-classes-schedule {
+    margin-bottom: 24px;
+}

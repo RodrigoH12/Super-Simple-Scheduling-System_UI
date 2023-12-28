@@ -13,6 +13,7 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './shared/components/header/header.component';
 import { HomePageComponent } from './pages/home-page/home-page.component';
 import { UserInfoCardComponent } from './pages/home-page/components/userSection/user-info-card/user-info-card.component';
+import { UserClassesCardComponent } from './pages/home-page/components/userSection/user-classes-card/user-classes-card.component';
 
 @NgModule({
     declarations: [
@@ -20,6 +21,7 @@ import { UserInfoCardComponent } from './pages/home-page/components/userSection/
         HeaderComponent,
         HomePageComponent,
         UserInfoCardComponent,
+        UserClassesCardComponent,
     ],
     imports: [
         BrowserModule,
