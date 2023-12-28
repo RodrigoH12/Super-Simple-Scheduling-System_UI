@@ -5,7 +5,7 @@ export type Student = {
     id: string;
     firstName: string;
     lastName: string;
-    userId: boolean;
+    userId: string;
 
     user: User | null;
     classes: Class[];
