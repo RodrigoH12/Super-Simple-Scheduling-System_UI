@@ -1,0 +1,24 @@
+@import "/src/assets/scss/variables.scss";
+@import "/src/assets/layouts/_scroll.scss";
+
+.content-container {
+    background-color: $application-background-color;
+}
+
+.schedule-page-container {
+    height: $page-height;
+    max-width: $content-max-width;
+    margin: 0 auto;
+    overflow-y: hidden;
+}
+
+.classes-section {
+    margin-top: $schedule-page--margin-top;
+    padding: 0px 24px 0px 24px;
+    overflow-y: auto;
+    height: calc($page-height - $schedule-page--margin-top);
+
+    &::-webkit-scrollbar-track {
+        margin-bottom: $schedule-page--margin-bottom;
+    }
+}

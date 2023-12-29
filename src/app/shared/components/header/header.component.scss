@@ -1,11 +1,11 @@
 @import "/src/assets/scss/variables.scss";
 
 .content-container {
-    background-color: $header-background-color;
+    background-color: $application-corporate-color;
 }
 
 .navbar {
-    background-color: $header-background-color;
+    background-color: $application-corporate-color;
     height: $header-height;
     max-width: $content-max-width;
     margin: 0 auto;
@@ -16,7 +16,7 @@
 }
 
 .nav-link {
-    color: $header-options-font-color;
+    color: $application-white-color;
     font-size: $header-options-font-size;
     margin-left: $header-options-margin;
     margin-right: $header-options-margin;

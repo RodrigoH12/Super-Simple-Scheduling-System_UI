@@ -1,0 +1,29 @@
+@import "/src/assets/scss/variables.scss";
+
+.btn-close:focus {
+    outline: none;
+}
+
+.modal-info {
+    display: flex;
+    align-items: center;
+
+    i {
+        font-size: 20px;
+        margin-right: 8px;
+    }
+}
+
+.modal-footer {
+    justify-content: center;
+}
+
+.modal-info-msg {
+    color: $application-info-color;
+}
+
+.close-btn {
+    color: $application-white-color;
+    background-color: $application-gold-color;
+    width: 100%;
+}

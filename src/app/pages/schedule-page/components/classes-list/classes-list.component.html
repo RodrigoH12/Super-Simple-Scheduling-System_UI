@@ -1,0 +1,17 @@
+<div class="classes-list-container">
+    <h4 class="schedule-classes-title">Classes in schedule {{ schedule }}:</h4>
+
+    <div *ngIf="classes.length === 0" class="schedule-classes-empty">
+        At the moment there are not available classes in this schedule.
+    </div>
+
+    <div *ngIf="classes.length > 0" class="schedule-classes-list">
+        <div
+            class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4"
+        >
+            <div *ngFor="let class of classes">
+                <app-class-card [class]="class"></app-class-card>
+            </div>
+        </div>
+    </div>
+</div>
