@@ -1,8 +1,18 @@
 @import "/src/assets/scss/variables.scss";
 
+.content-container {
+    background-color: $header-background-color;
+}
+
 .navbar {
     background-color: $header-background-color;
     height: $header-height;
+    max-width: $content-max-width;
+    margin: 0 auto;
+}
+
+.navbar-options {
+    display: flex;
 }
 
 .nav-link {
@@ -10,10 +20,10 @@
     font-size: $header-options-font-size;
     margin-left: $header-options-margin;
     margin-right: $header-options-margin;
+    padding: 8px;
 }
 
 .nav-link.active {
-    color: $header-options-font-color;
     font-weight: $header-options-active-font-weight;
     max-height: 46px;
     border-bottom: 1px solid #ffffff;

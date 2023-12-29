@@ -1,8 +1,9 @@
 @import "/src/assets/scss/variables.scss";
+@import "/src/assets/layouts/_scroll.scss";
 
 .card {
-    width: 280px;
-    height: calc(100vh - 332px);
+    width: $user-section-container-width;
+    height: calc(100vh - 316px);
     border: $card-border;
     border-radius: $card-border-radius;
     box-shadow: $card-box-shadow;

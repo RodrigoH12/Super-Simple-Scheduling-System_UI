@@ -1,3 +1,11 @@
+//======================= SIZES =======================
+
+$content-max-width: 1280px;
+$header-height: 68px;
+$page-height: calc(100vh - $header-height);
+$scrollbar-width: 16px;
+$user-section-container-width: 264px;
+
 //====================== TEXTS ======================
 
 $header-options-font-size: 20px;
@@ -18,17 +26,14 @@ $home-page--margin-bottom: 24px;
 $application-background-color: #f3f2f2;
 $header-background-color: #000000;
 $header-options-font-color: #ffffff;
+$tx-scrollbar-color: #d1cfcf;
 
 //======================= COMPONENTS ==================
-
-$header-height: 68px;
 
 $card-border: 0px;
 $card-border-radius: 4px;
 $card-box-shadow: 1px 1px 2px 1px rgba(46, 43, 43, 0.2);
 
-$card-user-img-width: 120px;
-$card-user-img-height: 120px;
+$card-user-img-width: 104px;
+$card-user-img-height: 104px;
 $card-user-img-border-radius: 50%;
-
-$page-height: calc(100vh - $header-height);

@@ -1,22 +1,29 @@
 @import "/src/assets/scss/variables.scss";
+
+.content-container {
+    background-color: $application-background-color;
+}
+
 .home-page-container {
     display: grid;
     grid-template-columns: 0.2fr auto;
     height: $page-height;
+
+    max-width: $content-max-width;
+    margin: 0 auto;
     overflow-y: hidden;
-    background-color: $application-background-color;
 
     .user-section {
         margin-top: $home-page--margin-top;
         margin-bottom: $home-page--margin-bottom;
-        padding: 0px 24px 0px 32px;
+        padding: 0px 24px 0px 16px;
         height: auto;
     }
 
     .news-section {
         margin-top: $home-page--margin-top;
         margin-bottom: $home-page--margin-bottom;
-        padding: 0px 48px 0px 24px;
+        padding: 0px 16px 0px 24px;
         height: auto;
     }
 }
