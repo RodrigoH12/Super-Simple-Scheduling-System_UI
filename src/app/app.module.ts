@@ -7,6 +7,7 @@ import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { EffectsModule } from '@ngrx/effects';
 import { routerReducer } from '@ngrx/router-store';
 import { SchedulingStateModule } from './core/store/state/app.state';
+import { MdbModalModule } from 'mdb-angular-ui-kit/modal';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -18,7 +19,7 @@ import { NewsCarouselComponent } from './pages/home-page/components/newsSection/
 import { SchedulePageComponent } from './pages/schedule-page/schedule-page.component';
 import { ClassesListComponent } from './pages/schedule-page/components/classes-list/classes-list.component';
 import { ClassCardComponent } from './pages/schedule-page/components/class-card/class-card.component';
-import { MdbModalModule } from 'mdb-angular-ui-kit/modal';
+import { ClassInfoModalComponent } from './pages/schedule-page/components/class-info-modal/class-info-modal.component';
 
 @NgModule({
     declarations: [
@@ -31,6 +32,7 @@ import { MdbModalModule } from 'mdb-angular-ui-kit/modal';
         SchedulePageComponent,
         ClassesListComponent,
         ClassCardComponent,
+        ClassInfoModalComponent,
     ],
     imports: [
         BrowserModule,
