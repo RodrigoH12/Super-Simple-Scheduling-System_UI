@@ -34,8 +34,12 @@ $tx-scrollbar-color: #d1cfcf;
 
 $card-border: 0px;
 $card-border-radius: 4px;
-$card-box-shadow: 1px 1px 2px 1px rgba(46, 43, 43, 0.2);
+$card-box-shadow: 0px 2px 8px rgba(46, 43, 43, 0.2);
 
-$card-user-img-width: 104px;
-$card-user-img-height: 104px;
-$card-user-img-border-radius: 50%;
+$user-info-card-img-width: 104px;
+$user-info-card-img-height: 104px;
+$user-info-card-img-border-radius: 50%;
+
+$class-card-width: 248px;
+$class-card-height: 280px;
+$class-card-img-height: 176px;
