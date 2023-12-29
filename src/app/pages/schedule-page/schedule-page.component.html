@@ -1,6 +1,23 @@
 <div class="content-container">
     <div class="schedule-page-container">
-        <div class="classes-section"></div>
+        <div class="classes-section">
+            <app-classes-list
+                [schedule]="'A'"
+                [classes]="getClassesBySchedule(0)"
+            ></app-classes-list>
+            <app-classes-list
+                [schedule]="'B'"
+                [classes]="getClassesBySchedule(1)"
+            ></app-classes-list>
+            <app-classes-list
+                [schedule]="'C'"
+                [classes]="getClassesBySchedule(2)"
+            ></app-classes-list>
+            <app-classes-list
+                [schedule]="'D'"
+                [classes]="getClassesBySchedule(3)"
+            ></app-classes-list>
+        </div>
     </div>
 </div>
 

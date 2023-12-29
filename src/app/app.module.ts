@@ -16,6 +16,7 @@ import { UserInfoCardComponent } from './pages/home-page/components/userSection/
 import { UserClassesCardComponent } from './pages/home-page/components/userSection/user-classes-card/user-classes-card.component';
 import { NewsCarouselComponent } from './pages/home-page/components/newsSection/news-carousel/news-carousel.component';
 import { SchedulePageComponent } from './pages/schedule-page/schedule-page.component';
+import { ClassesListComponent } from './pages/schedule-page/components/classes-list/classes-list.component';
 
 @NgModule({
     declarations: [
@@ -26,6 +27,7 @@ import { SchedulePageComponent } from './pages/schedule-page/schedule-page.compo
         UserClassesCardComponent,
         NewsCarouselComponent,
         SchedulePageComponent,
+        ClassesListComponent,
     ],
     imports: [
         BrowserModule,
