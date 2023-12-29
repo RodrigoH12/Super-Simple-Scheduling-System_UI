@@ -18,6 +18,7 @@ import { NewsCarouselComponent } from './pages/home-page/components/newsSection/
 import { SchedulePageComponent } from './pages/schedule-page/schedule-page.component';
 import { ClassesListComponent } from './pages/schedule-page/components/classes-list/classes-list.component';
 import { ClassCardComponent } from './pages/schedule-page/components/class-card/class-card.component';
+import { MdbModalModule } from 'mdb-angular-ui-kit/modal';
 
 @NgModule({
     declarations: [
@@ -42,6 +43,7 @@ import { ClassCardComponent } from './pages/schedule-page/components/class-card/
             maxAge: 25,
         }),
         EffectsModule.forRoot([]),
+        MdbModalModule,
     ],
     providers: [],
     bootstrap: [AppComponent],
