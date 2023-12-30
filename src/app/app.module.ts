@@ -20,6 +20,7 @@ import { SchedulePageComponent } from './pages/schedule-page/schedule-page.compo
 import { ClassesListComponent } from './pages/schedule-page/components/classes-list/classes-list.component';
 import { ClassCardComponent } from './pages/schedule-page/components/class-card/class-card.component';
 import { ClassInfoModalComponent } from './pages/schedule-page/components/class-info-modal/class-info-modal.component';
+import { LoginPageComponent } from './pages/login-page/login-page.component';
 
 @NgModule({
     declarations: [
@@ -33,6 +34,7 @@ import { ClassInfoModalComponent } from './pages/schedule-page/components/class-
         ClassesListComponent,
         ClassCardComponent,
         ClassInfoModalComponent,
+        LoginPageComponent,
     ],
     imports: [
         BrowserModule,
