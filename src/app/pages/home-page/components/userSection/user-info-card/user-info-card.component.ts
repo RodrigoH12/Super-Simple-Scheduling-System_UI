@@ -30,10 +30,5 @@ export class UserInfoCardComponent {
                 this.student = student;
             }
         });
-        this.store.dispatch(
-            getStudentClasses({
-                studentId: 'f5d72e55-a870-4f1a-9e80-08db4d6c094c',
-            })
-        );
     }
 }

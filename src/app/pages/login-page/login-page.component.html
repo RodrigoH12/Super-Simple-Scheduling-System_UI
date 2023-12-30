@@ -1,0 +1,52 @@
+<div class="content-container">
+    <div class="login-page-container">
+        <div class="card">
+            <img
+                src="/assets/img/login_cover.jpg"
+                alt="Logo"
+                class="card-img-top"
+            />
+            <div class="card-body">
+                <form>
+                    <h4 class="card-body-title">
+                        Super Simple Scheduling System
+                    </h4>
+                    <div class="mb-3">
+                        <label for="username" class="form-label">
+                            Username
+                        </label>
+                        <input
+                            type="text"
+                            class="form-control"
+                            id="username"
+                            name="username"
+                            placeholder="Enter your username"
+                            [(ngModel)]="username"
+                        />
+                    </div>
+                    <div class="mb-3">
+                        <label for="password" class="form-label">
+                            Password
+                        </label>
+                        <input
+                            type="password"
+                            class="form-control"
+                            id="password"
+                            name="password"
+                            placeholder="Enter your password"
+                            [(ngModel)]="password"
+                        />
+                    </div>
+                    <button
+                        type="submit"
+                        class="btn login-btn"
+                        (click)="login()"
+                    >
+                        Login
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
