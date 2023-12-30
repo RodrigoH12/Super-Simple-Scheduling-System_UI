@@ -10,3 +10,5 @@ export const loginSuccess = createAction(
     '[User Action] Log in User Success',
     props<{ user: User }>()
 );
+
+export const signOut = createAction('[User Action] Sign out User');

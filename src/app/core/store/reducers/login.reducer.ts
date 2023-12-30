@@ -30,6 +30,12 @@ export const loginReducer = createReducer(
         user: action.user,
         isLoading: false,
         loggedIn: true,
+    })),
+    on(LoginActions.signOut, (state) => ({
+        ...state,
+        isLoading: true,
+        user: initialState.user,
+        loggedIn: false,
     }))
 );
 
