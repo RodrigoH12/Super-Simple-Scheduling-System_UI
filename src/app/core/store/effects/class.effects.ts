@@ -1,7 +1,13 @@
 import { Injectable } from '@angular/core';
 import { Actions, createEffect, ofType } from '@ngrx/effects';
 import { EMPTY } from 'rxjs';
-import { map, exhaustMap, catchError, switchMap } from 'rxjs/operators';
+import {
+    map,
+    exhaustMap,
+    catchError,
+    switchMap,
+    concatMap,
+} from 'rxjs/operators';
 import { ClassService } from '../../services/class.service';
 import {
     getClasses,
@@ -13,6 +19,7 @@ import {
     assignStudentToClass,
     assignStudentToClassSuccess,
 } from '../actions/class.actions';
+import { getStudentClasses } from '../actions/student.actions';
 
 @Injectable()
 export class ClassEffects {
@@ -65,11 +72,14 @@ export class ClassEffects {
                 this.classService
                     .assignStudentToClass(action.classId, action.studentId)
                     .pipe(
-                        map((response) =>
+                        concatMap((response) => [
                             assignStudentToClassSuccess({
                                 class: response.data,
-                            })
-                        ),
+                            }),
+                            getStudentClasses({
+                                studentId: action.studentId,
+                            }),
+                        ]),
                         catchError(() => EMPTY)
                     )
             )
