@@ -22,6 +22,7 @@ import { ClassCardComponent } from './pages/schedule-page/components/class-card/
 import { ClassInfoModalComponent } from './pages/schedule-page/components/class-info-modal/class-info-modal.component';
 import { LoginPageComponent } from './pages/login-page/login-page.component';
 import { ToastComponent } from './shared/components/toast/toast.component';
+import { NewsCardComponent } from './pages/home-page/components/newsSection/news-card/news-card.component';
 
 @NgModule({
     declarations: [
@@ -37,6 +38,7 @@ import { ToastComponent } from './shared/components/toast/toast.component';
         ClassInfoModalComponent,
         LoginPageComponent,
         ToastComponent,
+        NewsCardComponent,
     ],
     imports: [
         BrowserModule,

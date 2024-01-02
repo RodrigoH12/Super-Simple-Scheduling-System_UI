@@ -12,6 +12,14 @@
             <div class="news-carousel">
                 <app-news-carousel></app-news-carousel>
             </div>
+            <div class="news-cards">
+                <h4>News & Events</h4>
+                <div class="row row-cols-1row-cols-md-2 row-cols-lg-3 g-4">
+                    <div *ngFor="let class of [0, 1, 2, 3, 4, 5]">
+                        <app-news-card></app-news-card>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>
