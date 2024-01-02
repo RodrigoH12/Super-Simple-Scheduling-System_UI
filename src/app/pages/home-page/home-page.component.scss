@@ -1,4 +1,5 @@
 @import "/src/assets/scss/variables.scss";
+@import "/src/assets/layouts/scroll";
 
 .content-container {
     background-color: $application-background-color;
@@ -24,9 +25,15 @@
         margin-bottom: $home-page--margin-bottom;
         padding: 0px 16px 0px 24px;
         height: auto;
+        overflow-y: auto;
+        height: calc(100vh - 116px);
     }
 }
 
 .user-info-card {
     margin-bottom: 16px;
+}
+
+.news-cards {
+    margin-top: 24px;
 }
