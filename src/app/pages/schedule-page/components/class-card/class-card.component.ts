@@ -31,7 +31,6 @@ export class ClassCardComponent {
     }
 
     openModal() {
-        console.log('Open modal');
         this.modalRef = this.modalService.open(ClassInfoModalComponent, {
             modalClass: 'modal-dialog-centered',
             data: {
