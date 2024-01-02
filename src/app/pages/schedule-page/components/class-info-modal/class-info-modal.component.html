@@ -1,0 +1,78 @@
+<div class="modal-header">
+    <h4 class="modal-title">Register</h4>
+    <button
+        type="button"
+        class="btn-close"
+        aria-label="Close"
+        (click)="modalRef.close()"
+    ></button>
+</div>
+<div class="modal-body">
+    <h5>{{ class.title }}</h5>
+    <div class="mb-3">{{ class.description }}.</div>
+    <div class="modal-info mb-1">
+        <i class="bi bi-person-circle"></i>
+        <p class="card-text">Teacher: {{ class.teacher }}</p>
+    </div>
+    <div class="modal-info mb-1">
+        <i class="bi bi-clock"></i>
+        <p class="card-text">Schedule: {{ schedule[class.schedule] }}</p>
+    </div>
+    <div class="modal-info">
+        <i class="bi bi-list-ol"></i>
+        <p class="card-text">Students assigned: {{ class.students.length }}</p>
+    </div>
+</div>
+<div *ngIf="registeredToThisClass === true">
+    <div class="modal-footer">
+        <div class="modal-info modal-info-msg">
+            <i class="bi bi-exclamation-circle"></i>
+            <div class="modal-info-msg">
+                You are already registered in this class
+            </div>
+        </div>
+
+        <button
+            type="button"
+            class="btn close-btn"
+            disabled
+            (click)="registerStudentToClass()"
+        >
+            Register
+        </button>
+    </div>
+</div>
+
+<div *ngIf="classInSameSchedule === true">
+    <div class="modal-footer">
+        <div class="modal-info modal-info-msg">
+            <i class="bi bi-exclamation-circle"></i>
+            <div class="modal-info-msg">
+                You are already registered in a class in
+                {{ schedule[class.schedule] }} schedule
+            </div>
+        </div>
+
+        <button
+            type="button"
+            class="btn close-btn"
+            disabled
+            (click)="registerStudentToClass()"
+        >
+            Register
+        </button>
+    </div>
+</div>
+
+<div *ngIf="registeredToThisClass === false && classInSameSchedule === false">
+    <div class="modal-footer">
+        <button
+            type="button"
+            class="btn close-btn"
+            (click)="registerStudentToClass()"
+        >
+            Register
+        </button>
+    </div>
+</div>
+

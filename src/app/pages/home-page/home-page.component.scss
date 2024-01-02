@@ -1,0 +1,39 @@
+@import "/src/assets/scss/variables.scss";
+@import "/src/assets/layouts/scroll";
+
+.content-container {
+    background-color: $application-background-color;
+}
+
+.home-page-container {
+    display: grid;
+    grid-template-columns: 0.2fr auto;
+    height: $page-height;
+    max-width: $content-max-width;
+    margin: 0 auto;
+    overflow-y: hidden;
+
+    .user-section {
+        margin-top: $home-page--margin-top;
+        margin-bottom: $home-page--margin-bottom;
+        padding: 0px 24px 0px 16px;
+        height: auto;
+    }
+
+    .news-section {
+        margin-top: $home-page--margin-top;
+        margin-bottom: $home-page--margin-bottom;
+        padding: 0px 16px 0px 24px;
+        height: auto;
+        overflow-y: auto;
+        height: calc(100vh - 116px);
+    }
+}
+
+.user-info-card {
+    margin-bottom: 16px;
+}
+
+.news-cards {
+    margin-top: 24px;
+}

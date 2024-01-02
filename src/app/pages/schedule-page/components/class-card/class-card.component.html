@@ -1,0 +1,22 @@
+<div class="card" (click)="openModal()">
+    <img
+        src="https://macleans.ca/wp-content/uploads/2010/11/111108_unimain-Cropped.jpg"
+        class="card-img-top"
+        alt="Photo"
+    />
+    <div class="card-body">
+        <h6 class="card-title">{{ class.title }}</h6>
+        <div class="card-info mb-1">
+            <i class="bi bi-person-circle"></i>
+            <p class="card-text">
+                {{ class.teacher }}
+            </p>
+        </div>
+        <div class="card-info">
+            <i class="bi bi-clock"></i>
+            <p class="card-text">
+                {{ getSchedule(class.schedule) }}
+            </p>
+        </div>
+    </div>
+</div>

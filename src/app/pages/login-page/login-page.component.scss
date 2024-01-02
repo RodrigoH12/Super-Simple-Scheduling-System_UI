@@ -1,0 +1,30 @@
+@import "/src/assets/scss/variables.scss";
+
+.content-container {
+    background-color: $application-background-color;
+}
+
+.login-page-container {
+    height: 100vh;
+    max-width: $content-max-width;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card {
+    width: 30vw;
+}
+
+.card-body-title {
+    display: flex;
+    justify-content: center;
+}
+
+.login-btn {
+    color: $application-white-color;
+    background-color: $application-gold-color;
+    width: 100%;
+    margin-top: 16px;
+}

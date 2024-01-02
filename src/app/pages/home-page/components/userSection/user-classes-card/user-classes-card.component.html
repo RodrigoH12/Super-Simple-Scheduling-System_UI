@@ -1,0 +1,18 @@
+<div class="card user-classes-card">
+    <div class="card-body">
+        <h5 class="card-title">Your classes are:</h5>
+        <div *ngIf="classes.length === 0" class="user-card-classes-empty">
+            The student is not assigned to any class yet
+        </div>
+
+        <div *ngIf="classes.length > 0" class="user-card-classes-schedule-list">
+            <div *ngFor="let c of classes">
+                <div class="user-card-classes-schedule">
+                    <h6>Schedule {{ getSchedule(c.schedule) }}</h6>
+                    <li>{{ c.title }}.</li>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

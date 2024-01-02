@@ -1,0 +1,21 @@
+@import "/src/assets/scss/variables.scss";
+
+.card {
+    margin: 8px;
+    max-height: 352px;
+}
+
+.card-img-top {
+    height: 150px;
+    object-fit: cover;
+}
+
+.more-info {
+    border-radius: 24px;
+    color: $application-white-color;
+    background-color: $application-gold-color;
+    box-shadow: 0 0 0;
+    padding-left: 24px;
+    padding-right: 24px;
+    text-transform: none;
+}
