@@ -16,3 +16,8 @@ export const selectLoggedIn = createSelector(
     selectLoginState,
     fromLogin.getLoggedIn
 );
+
+export const selectErrorMessage = createSelector(
+    selectLoginState,
+    fromLogin.getErrorMessage
+);

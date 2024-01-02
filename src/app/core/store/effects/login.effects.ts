@@ -1,9 +1,9 @@
 import { Injectable } from '@angular/core';
 import { Actions, createEffect, ofType } from '@ngrx/effects';
-import { EMPTY } from 'rxjs';
 import { map, catchError, switchMap } from 'rxjs/operators';
-import { login, loginSuccess } from '../actions/login.actions';
+import { login, loginFail, loginSuccess } from '../actions/login.actions';
 import { LoginService } from '../../services/login.service';
+import { httpExceptions } from 'src/app/shared/models/response.model';
 
 @Injectable()
 export class LoginEffects {
@@ -13,7 +13,11 @@ export class LoginEffects {
             switchMap((action) =>
                 this.loginService.login(action.username, action.password).pipe(
                     map((response) => loginSuccess({ user: response.data })),
-                    catchError(() => EMPTY)
+                    catchError(async (errorResponse) =>
+                        loginFail({
+                            errorMsg: httpExceptions(errorResponse),
+                        })
+                    )
                 )
             )
         )
