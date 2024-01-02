@@ -6,6 +6,7 @@ export interface StudentsState {
     isLoading: boolean;
     students: Student[];
     student: Student;
+    errorMessage: string;
 }
 
 export const initialState: StudentsState = {
@@ -19,6 +20,7 @@ export const initialState: StudentsState = {
         user: null,
         classes: [],
     },
+    errorMessage: '',
 };
 
 export const studentReducer = createReducer(
@@ -49,8 +51,15 @@ export const studentReducer = createReducer(
         ...state,
         student: action.student,
         isLoading: false,
+    })),
+    on(StudentActions.getStudentClassesFail, (state, action) => ({
+        ...state,
+        student: initialState.student,
+        isLoading: false,
+        errorMessage: action.errorMsg,
     }))
 );
 
 export const getStudent = (state: StudentsState) => state.student;
 export const getAllStudents = (state: StudentsState) => state.students;
+export const getErrorMessage = (state: StudentsState) => state.errorMessage;

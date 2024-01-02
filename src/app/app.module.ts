@@ -21,6 +21,7 @@ import { ClassesListComponent } from './pages/schedule-page/components/classes-l
 import { ClassCardComponent } from './pages/schedule-page/components/class-card/class-card.component';
 import { ClassInfoModalComponent } from './pages/schedule-page/components/class-info-modal/class-info-modal.component';
 import { LoginPageComponent } from './pages/login-page/login-page.component';
+import { ToastComponent } from './shared/components/toast/toast.component';
 
 @NgModule({
     declarations: [
@@ -35,6 +36,7 @@ import { LoginPageComponent } from './pages/login-page/login-page.component';
         ClassCardComponent,
         ClassInfoModalComponent,
         LoginPageComponent,
+        ToastComponent,
     ],
     imports: [
         BrowserModule,

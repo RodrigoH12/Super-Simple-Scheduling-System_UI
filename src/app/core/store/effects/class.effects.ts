@@ -18,8 +18,11 @@ import {
     getClassStudentsSuccess,
     assignStudentToClass,
     assignStudentToClassSuccess,
+    assignStudentToClassFail,
+    getClassesFail,
 } from '../actions/class.actions';
 import { getStudentClasses } from '../actions/student.actions';
+import { httpExceptions } from 'src/app/shared/models/response.model';
 
 @Injectable()
 export class ClassEffects {
@@ -31,7 +34,11 @@ export class ClassEffects {
                     map((response) =>
                         getClassesSuccess({ classes: response.data })
                     ),
-                    catchError(() => EMPTY)
+                    catchError(async (errorResponse) =>
+                        getClassesFail({
+                            errorMsg: httpExceptions(errorResponse),
+                        })
+                    )
                 )
             )
         )
@@ -80,7 +87,11 @@ export class ClassEffects {
                                 studentId: action.studentId,
                             }),
                         ]),
-                        catchError(() => EMPTY)
+                        catchError(async (errorResponse) =>
+                            assignStudentToClassFail({
+                                errorMsg: httpExceptions(errorResponse),
+                            })
+                        )
                     )
             )
         )

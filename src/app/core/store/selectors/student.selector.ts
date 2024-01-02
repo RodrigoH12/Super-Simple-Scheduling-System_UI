@@ -16,3 +16,8 @@ export const selectStudent = createSelector(
     selectStudentState,
     fromStudent.getStudent
 );
+
+export const selectErrorMessage = createSelector(
+    selectStudentState,
+    fromStudent.getErrorMessage
+);

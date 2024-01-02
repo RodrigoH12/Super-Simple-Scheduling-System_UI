@@ -6,6 +6,7 @@ export interface LoginState {
     isLoading: boolean;
     loggedIn: boolean;
     user: User;
+    errorMessage: string;
 }
 
 export const initialState: LoginState = {
@@ -17,6 +18,7 @@ export const initialState: LoginState = {
         password: '',
         student: null,
     },
+    errorMessage: '',
 };
 
 export const loginReducer = createReducer(
@@ -31,9 +33,13 @@ export const loginReducer = createReducer(
         isLoading: false,
         loggedIn: true,
     })),
+    on(LoginActions.loginFail, (state, action) => ({
+        ...state,
+        isLoading: false,
+        errorMessage: action.errorMsg,
+    })),
     on(LoginActions.signOut, (state) => ({
         ...state,
-        isLoading: true,
         user: initialState.user,
         loggedIn: false,
     }))
@@ -41,3 +47,4 @@ export const loginReducer = createReducer(
 
 export const getUser = (state: LoginState) => state.user;
 export const getLoggedIn = (state: LoginState) => state.loggedIn;
+export const getErrorMessage = (state: LoginState) => state.errorMessage;

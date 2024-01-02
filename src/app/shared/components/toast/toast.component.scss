@@ -1,0 +1,14 @@
+@import "/src/assets/scss/variables.scss";
+
+.toast {
+    position: absolute;
+    bottom: 24px;
+    left: 24px;
+    border: 0px;
+}
+
+.error-toast {
+    color: $application-white-color;
+    background-color: $application-toast-error-color;
+    border-radius: 8px;
+}

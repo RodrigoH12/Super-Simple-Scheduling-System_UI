@@ -27,3 +27,8 @@ export const getStudentClassesSuccess = createAction(
     '[Student Action] Get Student Classes Success',
     props<{ student: Student }>()
 );
+
+export const getStudentClassesFail = createAction(
+    '[Student Action] Get Student Classes Fail',
+    props<{ errorMsg: string }>()
+);
