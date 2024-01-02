@@ -10,7 +10,9 @@ import {
     getStudentByIdSuccess,
     getStudentClasses,
     getStudentClassesSuccess,
+    getStudentClassesFail,
 } from '../actions/student.actions';
+import { httpExceptions } from 'src/app/shared/models/response.model';
 
 @Injectable()
 export class StudentEffects {
@@ -50,7 +52,11 @@ export class StudentEffects {
                     map((response) =>
                         getStudentClassesSuccess({ student: response.data })
                     ),
-                    catchError(() => EMPTY)
+                    catchError(async (errorResponse) =>
+                        getStudentClassesFail({
+                            errorMsg: httpExceptions(errorResponse),
+                        })
+                    )
                 )
             )
         )
