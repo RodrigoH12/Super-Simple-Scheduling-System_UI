@@ -7,8 +7,14 @@ import {
     getClassStudents,
 } from 'src/app/core/store/actions/class.actions';
 import { initialState as studentInitialState } from 'src/app/core/store/reducers/student.reducer';
-import { initialState as classInitialState } from 'src/app/core/store/reducers/class.reducer';
-import { selectClass } from 'src/app/core/store/selectors/class.selector';
+import {
+    initialState as classInitialState,
+    initialState,
+} from 'src/app/core/store/reducers/class.reducer';
+import {
+    selectClass,
+    selectErrorMessage,
+} from 'src/app/core/store/selectors/class.selector';
 import { selectStudent } from 'src/app/core/store/selectors/student.selector';
 import { ScheduleEnum } from 'src/app/shared/models/Enums/schedule-enum';
 import { Class } from 'src/app/shared/models/class.model';
@@ -46,6 +52,8 @@ export class ClassInfoModalComponent {
         students: [],
     };
 
+    assignError$: Observable<string> = this.store.select(selectErrorMessage);
+
     constructor(
         public modalRef: MdbModalRef<ClassInfoModalComponent>,
         private store: Store<State<Class>>
@@ -69,6 +77,14 @@ export class ClassInfoModalComponent {
                 classId: this.classId,
             })
         );
+    }
+
+    ngAfterViewInit(): void {
+        this.assignError$.subscribe((error) => {
+            if (error != initialState.errorMessage) {
+                console.log(error);
+            }
+        });
     }
 
     verifyIfStudentHasClassInSchedule(): void {
@@ -96,4 +112,3 @@ export class ClassInfoModalComponent {
         this.modalRef.close();
     }
 }
-

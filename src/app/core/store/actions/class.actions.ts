@@ -8,6 +8,11 @@ export const getClassesSuccess = createAction(
     props<{ classes: Class[] }>()
 );
 
+export const getClassesFail = createAction(
+    '[Class Action] Get Classes Fail',
+    props<{ errorMsg: string }>()
+);
+
 export const getClassById = createAction(
     '[Class Action] Get Class',
     props<{ classId: String }>()
@@ -36,4 +41,9 @@ export const assignStudentToClass = createAction(
 export const assignStudentToClassSuccess = createAction(
     '[Class Action] Assign Student to Class Success',
     props<{ class: Class }>()
+);
+
+export const assignStudentToClassFail = createAction(
+    '[Class Action] Assign Student to Class Fail',
+    props<{ errorMsg: string }>()
 );

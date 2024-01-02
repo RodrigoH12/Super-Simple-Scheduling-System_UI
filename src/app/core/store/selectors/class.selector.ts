@@ -13,3 +13,8 @@ export const selectAllClasses = createSelector(
 );
 
 export const selectClass = createSelector(selectClassState, fromClass.getClass);
+
+export const selectErrorMessage = createSelector(
+    selectClassState,
+    fromClass.getErrorMessage
+);

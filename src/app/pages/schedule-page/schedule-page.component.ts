@@ -1,9 +1,15 @@
 import { Component } from '@angular/core';
 import { State, Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
-import { getClasses } from 'src/app/core/store/actions/class.actions';
+import {
+    getClasses,
+    getClassesFail,
+} from 'src/app/core/store/actions/class.actions';
 import { initialState } from 'src/app/core/store/reducers/class.reducer';
-import { selectAllClasses } from 'src/app/core/store/selectors/class.selector';
+import {
+    selectAllClasses,
+    selectErrorMessage,
+} from 'src/app/core/store/selectors/class.selector';
 import { ScheduleEnum } from 'src/app/shared/models/Enums/schedule-enum';
 import { Class } from 'src/app/shared/models/class.model';
 
@@ -16,6 +22,9 @@ export class SchedulePageComponent {
     classes$: Observable<Class[]> = this.store.select(selectAllClasses);
     classes: Class[] = [];
 
+    classesError$: Observable<string> = this.store.select(selectErrorMessage);
+    classesError: string = '';
+
     constructor(private store: Store<State<Class>>) {}
 
     ngOnInit(): void {
@@ -27,8 +36,20 @@ export class SchedulePageComponent {
         this.store.dispatch(getClasses());
     }
 
+    ngAfterViewInit(): void {
+        this.classesError$.subscribe((error) => {
+            if (error != initialState.errorMessage) {
+                this.classesError = error;
+            }
+        });
+    }
+
     getClassesBySchedule(scheduleEnum: ScheduleEnum): Class[] {
         return [...this.classes].filter((cls) => cls.schedule === scheduleEnum);
     }
-}
 
+    hideToast(): void {
+        this.classesError = '';
+        this.store.dispatch(getClassesFail({ errorMsg: '' }));
+    }
+}

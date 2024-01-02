@@ -7,6 +7,7 @@ export interface ClassesState {
     isLoading: boolean;
     classes: Class[];
     class: Class;
+    errorMessage: string;
 }
 
 export const initialState: ClassesState = {
@@ -20,6 +21,7 @@ export const initialState: ClassesState = {
         schedule: ScheduleEnum.A,
         students: [],
     },
+    errorMessage: '',
 };
 
 export const classReducer = createReducer(
@@ -32,6 +34,13 @@ export const classReducer = createReducer(
         ...state,
         classes: action.classes,
         isLoading: false,
+        errorMessage: '',
+    })),
+    on(ClassActions.getClassesFail, (state, action) => ({
+        ...state,
+        class: initialState.class,
+        isLoading: false,
+        errorMessage: action.errorMsg,
     })),
     on(ClassActions.getClassById, (state) => ({
         ...state,
@@ -41,6 +50,7 @@ export const classReducer = createReducer(
         ...state,
         class: action.class,
         isLoading: false,
+        errorMessage: '',
     })),
     on(ClassActions.getClassStudents, (state) => ({
         ...state,
@@ -50,6 +60,7 @@ export const classReducer = createReducer(
         ...state,
         class: action.class,
         isLoading: false,
+        errorMessage: '',
     })),
     on(ClassActions.assignStudentToClass, (state) => ({
         ...state,
@@ -59,8 +70,16 @@ export const classReducer = createReducer(
         ...state,
         class: action.class,
         isLoading: false,
+        errorMessage: '',
+    })),
+    on(ClassActions.assignStudentToClassFail, (state, action) => ({
+        ...state,
+        class: initialState.class,
+        isLoading: false,
+        errorMessage: action.errorMsg,
     }))
 );
 
 export const getClass = (state: ClassesState) => state.class;
 export const getAllClasses = (state: ClassesState) => state.classes;
+export const getErrorMessage = (state: ClassesState) => state.errorMessage;
